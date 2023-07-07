@@ -419,6 +419,12 @@ img{
   row-gap: 2rem;
 }
 
+.footer__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer__logo{
   font-size: var(--h3-font-size);
   color: var(--first-color);
