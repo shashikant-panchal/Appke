@@ -629,3 +629,52 @@ img{
         height: 640px;
     }
 }
+
+.models__container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+.models__card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center; /* Center title and image */
+}
+
+.models__img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Customize Models Section for Mobile View */
+@media screen and (max-width: 768px) {
+  .models__container {
+    display: flex; /* Reset display to flex */
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    gap: 10px; /* Adjust gap between cards */
+    padding: 20px 0; /* Add padding to top and bottom */
+    align-items: flex-start; /* Align cards to the top */
+  }
+
+  .models__card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    text-align: center;
+    width: 100%; /* Adjust card width */
+    min-width: 200px; /* Minimum width for small screens */
+  }
+
+  .models__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Add border radius */
+  }
+}
+
